@@ -4,7 +4,7 @@ MinecraftBot is a little bot write in Python
 ## Configuration
 
 
-You can choose `activated` if you want feed RSS
+You can change `activated` if you want feed RSS
 
 ```json
 {
