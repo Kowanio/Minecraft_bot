@@ -56,11 +56,10 @@ def main():
         bot = commands.Bot(command_prefix=config['discord_bot']['prefix'],
                            description=config['discord_bot']['description'])
         if config['feed']['activated']:
-            pass
+            bot.add_cog(cogs.Feed(bot, config['feed']))
         bot.add_cog(cogs.Entities(bot))
         bot.add_cog(cogs.Item(bot))
         bot.add_cog(cogs.Mojang(bot))
-        bot.add_cog(cogs.Feed(bot, config['feed']))
         bot.add_listener(on_ready)
         try:
             bot.run(config['discord_bot']['token'])
