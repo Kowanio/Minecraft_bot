@@ -3,19 +3,20 @@ import discord
 from discord.ext import commands, tasks
 import cogs
 
+
 async def on_ready():
     print("We have logged")
 
 
 def check_config(config):
-    if config['discord_bot']['token'] == "":
+    if config["discord_bot"]["token"] == "":
         print("Failed to load configuration parameter token is empty")
         return 1
     if config['discord_bot']['prefix'] == "":
         config['discord_bot']['prefix'] = "$"
     if config['discord_bot']['description'] == "":
         config['discord_bot']['prefix'] = "no description"
-    if config['feed']['activated'] == True and config['feed']['feed_url'] == "":
+    if config['feed']['activated'] and config['feed']['feed_url'] == "":
         print("Failed to load configuration parameter feed_url is empty")
         return 1
     return 0
