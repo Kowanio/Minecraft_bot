@@ -1,6 +1,6 @@
 # Minecraft Bot
 MinecraftBot is a little bot write in Python
-
+[![CodeFactor](https://www.codefactor.io/repository/github/kowanio/minecraft_bot/badge)](https://www.codefactor.io/repository/github/kowanio/minecraft_bot)
 ## Configuration
 
 
